@@ -33,8 +33,8 @@
 
 ## 사진을 바꾸는 법
 `photos/` 폴더에 같은 이름으로 사진을 올리면 바로 바뀝니다 (GitHub 화면에서 **Add file → Upload files**).
-- `scaler.jpg`, `tmd-splint-wide.jpg` (가로 1400×875): 진료 안내의 과목 사진
-- `scaler.jpg` 는 외부 자료 사진(CC BY-SA)입니다. 실제 진료 사진으로 바꾸면 `clinic.html` 맨 아래 출처 줄도 고치세요.
+- `scaling-illust.jpg`, `tmd-splint-wide.jpg` (가로 1400×875): 진료 안내의 과목 사진
+- `scaling-illust.jpg` 는 직접 그린 그림이라 출처 표기가 필요 없습니다.
 
 ## 케이스북에 정보 채우기
 `cases.html` 안의 `<!-- 채울 자리 ... -->` 주석이 실제 기록으로 채울 곳입니다. **지어낸 숫자나 후기는 넣지 마세요.**
@@ -65,6 +65,6 @@
 
 ## 자주 바꾸는 값
 - 진료 시간: `site.js` 맨 위 `HOURS` (9, 12, 13, 16), `hours.html` 의 진료 시간 표
-- 예약 번호(부대 내선): 네 파일과 `calendar.js`에서 `803-7112` 찾기
+- 예약 번호(부대 내선): 네 파일과 `calendar.js`에서 `7112` 찾기
 - 응급실 번호: 네 파일에서 `033-450-7119` 찾기 (응급 시에만 쓰도록 안내)
 - 의견함: `index.html` 의 `formResponse` 주소와 `entry.` 번호 (구글 폼을 새로 만들면 둘 다 바꿔야 합니다)

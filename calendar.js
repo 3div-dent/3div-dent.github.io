@@ -8,7 +8,7 @@
   if (!roots.length && !docLine) return;
 
   const DOW = ['일', '월', '화', '수', '목', '금', '토'];
-  const PHONE = '부대 내선 803-7112';
+  const PHONE = '부대 내선 7112';
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const parse = (k) => new Date(`${k}T00:00:00Z`);
   const keyOf = (d) => d.toISOString().slice(0, 10);
