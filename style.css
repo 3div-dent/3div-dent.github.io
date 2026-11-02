@@ -182,6 +182,7 @@ a:hover { color: var(--accent-deep); }
 
 /* ---------- 홈: 바로가기 타일 ---------- */
 .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tiles > .tile:last-child:nth-child(odd) { grid-column: 1 / -1; min-height: 0; flex-direction: row; align-items: center; justify-content: flex-start; gap: 14px; }
 .tile { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; min-height: 120px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); text-decoration: none; }
 .tile:hover { border-color: var(--ink); color: var(--ink); }
 .tile svg { width: 22px; height: 22px; color: var(--accent); }
@@ -321,7 +322,9 @@ a:hover { color: var(--accent-deep); }
 @media (min-width: 900px) {
   .intro { padding-top: 64px; }
   .callcard, .contact { padding: 32px; }
-  .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .tiles > .tile:last-child:nth-child(odd) { grid-column: auto; min-height: 120px; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 20px; }
+  .tiles > .tile:last-child:nth-child(3n+2) { grid-column: span 2; }
 }
 @media (max-width: 899px) {
   .site-nav, .site-call span { display: none; }
