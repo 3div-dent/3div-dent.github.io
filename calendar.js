@@ -8,7 +8,7 @@
   if (!roots.length && !docLine) return;
 
   const DOW = ['일', '월', '화', '수', '목', '금', '토'];
-  const PHONE = '부대 내선 7112';
+  const PHONE = '군) 803-7112';
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const parse = (k) => new Date(`${k}T00:00:00Z`);
   const keyOf = (d) => d.toISOString().slice(0, 10);
@@ -26,7 +26,8 @@
     data.doctors.forEach((doc, i) => {
       const a = away[doc.id];
       if (a === 'day') return;
-      docs.push({ ...doc, i, part: a === 'am' ? '오후' : a === 'pm' ? '오전' : '' });
+      if (w === 5 && a === 'am') return; // 금요일은 오전만 진료
+      docs.push({ ...doc, i, part: w === 5 ? '오전' : a === 'am' ? '오후' : a === 'pm' ? '오전' : '' });
     });
     return { closed: false, docs };
   }

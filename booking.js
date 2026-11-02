@@ -10,7 +10,7 @@
   const LONG_KINDS = ['발치', '신경치료']; // 1시간짜리 진료. 나머지는 30분
   const SUMMARY = '치과 진료 (3사단 의무대대 2층)';
   const LOCATION = '3사단 의무대대 2층 치과';
-  const DESCRIPTION = '10분 전 도착 · 진료 전 흡연 금지 · 먹는 약 이름 챙기기 · 문의 내선 7112(군 전화)';
+  const DESCRIPTION = '10분 전 도착 · 진료 전 흡연 금지 · 먹는 약 이름 챙기기 · 문의 군) 803-7112(군 전화)';
   const FILE_NAME = 'dental-appointment.ics';
   const SLOTS = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30'];
   // -------------------------------------
@@ -105,6 +105,7 @@
       if (!date.value) { msg.textContent = '전화로 잡은 날짜를 먼저 고르세요.'; date.focus(); return false; }
       const w = new Date(`${date.value}T00:00:00Z`).getUTCDay();
       if (w === 0 || w === 6) { msg.textContent = '토요일과 일요일은 휴진입니다. 날짜를 다시 확인하세요.'; date.focus(); return false; }
+      if (w === 5 && time.value >= '12:00') { msg.textContent = '금요일 오후는 휴진입니다. 날짜나 시간을 다시 확인하세요.'; time.focus(); return false; }
       return true;
     };
     const hh = `${pad(REMIND_HOUR)}:${pad(REMIND_MINUTE)}`;

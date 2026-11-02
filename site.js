@@ -25,17 +25,19 @@
     const tomorrow = (d) => (d === 5 || d === 6 ? '월요일' : '내일');
     let s, n, b = 'CLOSED';
     if (!weekday) {
-      s = '휴진'; n = `${tomorrow(day)} 09:00에 다시 엽니다. 예약은 그때 군 전화로 내선 7112.`;
+      s = '휴진'; n = `${tomorrow(day)} 09:00에 다시 엽니다. 예약은 그때 군 전화 803-7112.`;
+    } else if (day === 5 && minutes >= HOURS.lunchStart) {
+      s = '오늘 진료 끝'; n = `금요일 오후는 휴진입니다. 월요일 09:00에 다시 엽니다. 예약은 그때 군 전화 803-7112.`;
     } else if (minutes < HOURS.open) {
       s = '진료 전'; n = `${left(HOURS.open - minutes)} 뒤인 09:00에 엽니다.`;
     } else if (minutes < HOURS.lunchStart) {
-      s = '진료 중'; n = `점심시간 12:00까지 ${left(HOURS.lunchStart - minutes)}. 지금 내선 7112로 예약할 수 있습니다.`; b = 'OPEN';
+      s = '진료 중'; n = `${day === 5 ? `금요일은 12:00까지만 진료합니다. ${left(HOURS.lunchStart - minutes)} 남았습니다.` : `점심시간 12:00까지 ${left(HOURS.lunchStart - minutes)}.`} 지금 군) 803-7112로 예약할 수 있습니다.`; b = 'OPEN';
     } else if (minutes < HOURS.lunchEnd) {
       s = '점심시간'; n = '13:00에 오후 진료를 시작합니다.'; b = 'LUNCH';
     } else if (minutes < HOURS.close) {
-      s = '진료 중'; n = `오늘 진료는 16:00까지, ${left(HOURS.close - minutes)} 남았습니다. 지금 내선 7112로 예약할 수 있습니다.`; b = 'OPEN';
+      s = '진료 중'; n = `오늘 진료는 16:00까지, ${left(HOURS.close - minutes)} 남았습니다. 지금 군) 803-7112로 예약할 수 있습니다.`; b = 'OPEN';
     } else {
-      s = '오늘 진료 끝'; n = `${tomorrow(day)} 09:00에 다시 엽니다. 예약은 그때 군 전화로 내선 7112.`;
+      s = '오늘 진료 끝'; n = `${tomorrow(day)} 09:00에 다시 엽니다. 예약은 그때 군 전화 803-7112.`;
     }
     status.textContent = s;
     next.textContent = n;
