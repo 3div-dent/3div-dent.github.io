@@ -420,3 +420,4 @@ a:hover { color: var(--accent-deep); }
 .softbox--accent { background: var(--accent-soft); }
 .softbox--accent b { color: var(--accent); }
 .softbox p b { display: inline; color: var(--ink); }
+.intro .copyright { margin-top: 12px; padding: 10px 12px; max-width: 36em; background: var(--soft); border-radius: 8px; font-size: 13px; line-height: 1.6; color: var(--muted); }
