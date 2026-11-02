@@ -414,3 +414,6 @@ a:hover { color: var(--accent-deep); }
 .promo__eb { flex: none; padding: 4px 10px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 700; }
 .promo b { display: block; font-size: 15px; font-weight: 700; }
 .promo b + span { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); }
+.softbox--accent { background: var(--accent-soft); }
+.softbox--accent b { color: var(--accent); }
+.softbox p b { display: inline; color: var(--ink); }
