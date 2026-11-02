@@ -54,7 +54,7 @@
     const lines = [
       'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//3사단 의무대대 치과//예약//KO', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
       'BEGIN:VEVENT',
-      `UID:${Date.now()}-${Math.random().toString(36).slice(2)}-${Math.random().toString(36).slice(2)}@wonwoo-dent.github.io`,
+      `UID:${Date.now()}-${Math.random().toString(36).slice(2)}-${Math.random().toString(36).slice(2)}@3div-dent.github.io`,
       `DTSTAMP:${utc(new Date())}`,
       `DTSTART:${utc(start)}`,
       `DTEND:${utc(end)}`,

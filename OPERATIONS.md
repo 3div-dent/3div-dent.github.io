@@ -1,6 +1,6 @@
 # 운영 안내 (치과 직원용)
 
-홈페이지: https://wonwoo-dent.github.io/dental_clinic/
+홈페이지: https://3div-dent.github.io/
 
 용사는 일과 중에 휴대폰이 없고, 내선 7112는 일과 시간에 군 전화로만 걸 수 있습니다.
 그래서 **전화를 거는 대신 문자를 보내고, 용사가 저녁에 읽은 뒤 다음 날 군 전화로 거는 흐름**을 기본으로 합니다.
@@ -14,19 +14,19 @@
 ### 보철물 도착
 ```
 [3사단 치과] 보철물이 도착했습니다. 일과 시간(평일 09-16시)에 행정반 군전화로 내선 7112에 장착 예약해 주세요. 소속·계급·이름·군번을 말씀해 주세요.
-https://wonwoo-dent.github.io/dental_clinic/prosthesis.html#arrived
+https://3div-dent.github.io/prosthesis.html#arrived
 ```
 
 ### 예약 확인 (예약 전날)
 ```
 [3사단 치과] 내일 ○○:○○ 치과 예약이 있습니다. 10분 전에 와 주세요. 변경은 일과 시간에 군전화로 내선 7112.
-https://wonwoo-dent.github.io/dental_clinic/hours.html#how
+https://3div-dent.github.io/hours.html#how
 ```
 
 ### 휴진·훈련 공지
 ```
 [3사단 치과] ○월 ○일(○)~○일(○)은 ○○ 일정으로 치과 진료가 없습니다. 응급은 당직 의무병에게 알려 주세요.
-https://wonwoo-dent.github.io/dental_clinic/hours.html#schedule
+https://3div-dent.github.io/hours.html#schedule
 ```
 
 한글 45자 정도를 넘으면 장문 문자(LMS)로 나갑니다.
@@ -38,11 +38,11 @@ https://wonwoo-dent.github.io/dental_clinic/hours.html#schedule
 
 | 버튼 이름 | 연결 주소 |
 | --- | --- |
-| 증례 보기 (고정) | https://wonwoo-dent.github.io/dental_clinic/cases.html |
-| 예약 방법 | https://wonwoo-dent.github.io/dental_clinic/hours.html#how |
-| 보철 진행 | https://wonwoo-dent.github.io/dental_clinic/prosthesis.html |
-| 주의사항 | https://wonwoo-dent.github.io/dental_clinic/care.html |
-| 응급일 때 | https://wonwoo-dent.github.io/dental_clinic/hours.html#emergency |
+| 증례 보기 (고정) | https://3div-dent.github.io/cases.html |
+| 예약 방법 | https://3div-dent.github.io/hours.html#how |
+| 보철 진행 | https://3div-dent.github.io/prosthesis.html |
+| 주의사항 | https://3div-dent.github.io/care.html |
+| 응급일 때 | https://3div-dent.github.io/hours.html#emergency |
 
 ### 키워드 자동응답
 | 키워드 | 답변 |
@@ -54,7 +54,7 @@ https://wonwoo-dent.github.io/dental_clinic/hours.html#schedule
 | 시간, 언제 | 평일 09:00–12:00, 13:00–16:00. 주말·공휴일 휴진. 군의관 진료 일정 → hours.html#schedule |
 | 보톡스 | 시술 당일 주사 부위를 문지르지 말고 사우나·음주·격한 운동을 피하세요. → care.html#botox |
 
-답변의 주소 앞에는 `https://wonwoo-dent.github.io/dental_clinic/`를 붙이세요.
+답변의 주소 앞에는 `https://3div-dent.github.io/`를 붙이세요.
 
 ### 1:1 채팅
 - **1:1 채팅은 끄거나, 아래 자동응답만 나가게 하세요.** 군번이나 증상을 채팅으로 받으면 외부망에 개인정보가 쌓이고, 결국 누군가 인트라넷에 손으로 옮겨 적어야 합니다.

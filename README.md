@@ -1,6 +1,6 @@
 # 3사단 의무대대 치과 홈페이지
 
-주소: https://wonwoo-dent.github.io/dental_clinic/
+주소: https://3div-dent.github.io/
 
 | 파일 | 내용 |
 | --- | --- |
