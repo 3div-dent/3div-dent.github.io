@@ -50,7 +50,6 @@ a:hover { color: var(--accent-deep); }
 
 /* 영문 대문자 작은 라벨 */
 .eb { margin: 0 0 8px; font-family: var(--font-eb); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-.eb--accent { color: var(--accent); }
 
 /* ---------- 헤더 ---------- */
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid var(--line); backdrop-filter: saturate(1.4) blur(8px); -webkit-backdrop-filter: saturate(1.4) blur(8px); }
@@ -149,9 +148,8 @@ a:hover { color: var(--accent-deep); }
 /* ---------- 전화 스크립트 카드 (어두운 면) ---------- */
 .callcard { margin-top: 56px; padding: 24px 20px; background: var(--dark); color: #fff; border-radius: var(--radius); }
 .block .callcard, .callcard--inline { margin-top: 20px; }
-.callcard h3.callcard__title { margin-top: 10px; }
-.callcard .eb { margin: 0; color: var(--dark-label); }
-.callcard__title { margin-top: 10px; font-size: 20px; font-weight: 700; line-height: 1.35; }
+.callcard h3.callcard__title { margin-top: 0; }
+.callcard__title { margin-top: 0; font-size: 20px; font-weight: 700; line-height: 1.35; }
 .callcard__note { margin-top: 8px; font-size: 14px; line-height: 1.6; color: var(--dark-text); }
 .callcard__list { margin-top: 18px; display: grid; grid-template-columns: 76px minmax(0, 1fr); row-gap: 10px; font-size: 15px; }
 .callcard__list dt { color: var(--dark-label); }
@@ -269,7 +267,7 @@ a:hover { color: var(--accent-deep); }
 .fb { display: grid; gap: 10px; margin-top: 18px; }
 .fb__label { font-size: 14px; font-weight: 600; }
 .fb__field { width: 100%; min-height: 8.5rem; padding: 12px 14px; border: 1px solid var(--line-strong); border-radius: 8px; background: #fff; font-size: 16px; line-height: 1.55; resize: vertical; }
-.fb__field::placeholder { color: #8a94a3; }
+.fb__field::placeholder { color: var(--muted); }
 .fb__row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
 .fb__done { margin-top: 12px; padding: 14px 16px; background: var(--accent-soft); border-radius: 8px; font-size: 15px; }
 .fb.is-sending .button { opacity: 0.6; pointer-events: none; }
@@ -382,7 +380,7 @@ a:hover { color: var(--accent-deep); }
 .why li { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.6; }
 .notice { margin-top: 40px; font-size: 12px; line-height: 1.7; color: var(--muted); }
 @media (max-width: 380px) { .specialist__steps b { font-size: 14px; } }
-.contact .contact__lead { margin-top: 10px; font-size: 18px; font-weight: 700; line-height: 1.45; color: #fff; }
+.contact .contact__lead { margin-top: 0; font-size: 18px; font-weight: 700; line-height: 1.45; color: #fff; }
 .addcal__buttons { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
 .addcal__buttons .button { margin-top: 0; width: 100%; }
 .addcal__kakao { margin-bottom: 14px; padding: 12px 14px; background: var(--warn-bg); border-radius: 8px; font-size: 14px; line-height: 1.6; color: var(--warn-text); }
