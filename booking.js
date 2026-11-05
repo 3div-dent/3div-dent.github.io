@@ -113,6 +113,11 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!valid()) return;
+      if (inKakao && window.dentalOpenExternal) { // 카카오톡 안에서는 브라우저로 넘겨서 다시 하게 한다
+        msg.textContent = '브라우저로 다시 열어요. 열린 화면에서 한 번 더 눌러 주세요.';
+        window.dentalOpenExternal(location.href.split('#')[0] + '#' + (form.closest('section') ? form.closest('section').id : 'add-calendar'));
+        return;
+      }
       download(buildIcs(date.value, time.value, kind.value));
       msg.textContent = isIOS
         ? `'캘린더에 추가' 창에서 저장하세요. 진료 전날 ${hh}에 알림이 울립니다.`

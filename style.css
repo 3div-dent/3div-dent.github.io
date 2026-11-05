@@ -421,3 +421,7 @@ a:hover { color: var(--accent-deep); }
 .softbox--accent b { color: var(--accent); }
 .softbox p b { display: inline; color: var(--ink); }
 .intro .copyright { margin-top: 12px; padding: 10px 12px; max-width: 36em; background: var(--soft); border-radius: 8px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+
+/* 카카오톡 인앱 브라우저 안내 띠 */
+.kakao-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px var(--gutter); background: var(--warn-bg); color: var(--warn-text); font-size: 14px; line-height: 1.45; }
+.kakao-bar button { flex: none; min-height: 40px; padding: 0 14px; border: 0; border-radius: 8px; background: var(--warn); color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; }
