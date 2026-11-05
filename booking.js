@@ -47,6 +47,8 @@
     remind.setUTCDate(remind.getUTCDate() - 1);
     return { start, end, remind };
   }
+  // 진료 시작에서 알림 시각까지의 차이를 '-PT19H30M' 꼴로 (전날 18:00과 같은 시각)
+  const before = (start, remind) => { const m = Math.round((start - remind) / 60000); return `-PT${Math.floor(m / 60)}H${m % 60}M`; };
   const details = (kind) => `용건: ${kind}\n${DESCRIPTION}`;
 
   function buildIcs(date, time, kind) {
@@ -63,7 +65,7 @@
       `DESCRIPTION:${esc(details(kind))}`,
       'BEGIN:VALARM', 'ACTION:DISPLAY',
       `DESCRIPTION:${esc(`내일 ${time} 치과 진료 · 10분 전 의무대대 2층 · 진료 전 흡연 금지`)}`,
-      `TRIGGER;VALUE=DATE-TIME:${utc(remind)}`,
+      `TRIGGER:${before(start, remind)}`,
       'END:VALARM',
       'END:VEVENT', 'END:VCALENDAR',
     ];
@@ -119,9 +121,11 @@
         return;
       }
       download(buildIcs(date.value, time.value, kind.value));
-      msg.textContent = isIOS
-        ? `'캘린더에 추가' 창에서 저장하세요. 진료 전날 ${hh}에 알림이 울립니다.`
-        : `파일을 내려받았습니다. 삼성 캘린더로 열어 저장하세요. 진료 전날 ${hh}에 알림이 울립니다.`;
+      if (isIOS) {
+        msg.textContent = `'캘린더에 추가' 창에서 저장하세요. 진료 전날 ${hh}에 알림이 울립니다.`;
+      } else {
+        msg.innerHTML = `<b>거의 다 됐어요.</b> ① 뜨는 창에서 <b>다운로드</b> → ② 화면 아래나 위 알림의 <b>열기</b>(또는 내 파일 › 다운로드에서 파일 누르기) → ③ <b>캘린더</b>로 열고 <b>저장</b>. 진료 전날 ${hh}에 알림이 울립니다.`;
+      }
     });
     if (google) google.addEventListener('click', () => {
       if (!valid()) return;
